@@ -1,0 +1,323 @@
+.special-offers-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f6f6f6 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.offers-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.offers-icon {
+  font-size: 3rem !important;
+  color: #FFD700;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+  animation: float 3s ease-in-out infinite;
+}
+
+.offers-title {
+  font-weight: 800 !important;
+  background: linear-gradient(45deg, #FF4B2B, #FF416C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem !important;
+}
+
+.offers-subtitle {
+  color: #666;
+  font-weight: 400 !important;
+}
+
+.offers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.offer-card {
+  border-radius: 20px !important;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+.offer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
+}
+
+.offer-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.offer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover .offer-image {
+  transform: scale(1.1);
+}
+
+.offer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+}
+
+.offer-percentage {
+  color: white !important;
+  font-weight: 800 !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.offer-content {
+  padding: 2rem;
+}
+
+.offer-description {
+  font-weight: 600 !important;
+  margin-bottom: 1rem !important;
+  color: #333;
+}
+
+.offer-code-container {
+  margin: 1.5rem 0;
+}
+
+.offer-code {
+  padding: 0.5rem 1rem;
+  border: 2px dashed;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.copy-badge {
+  cursor: pointer;
+}
+
+.copy-badge .MuiBadge-badge {
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0 6px;
+  height: 20px;
+  min-width: 45px;
+}
+
+.offer-expiry {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.claim-button {
+  border-radius: 50px !important;
+  padding: 0.8rem !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  font-size: 1.1rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.claim-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .special-offers-section {
+    padding: 40px 0;
+  }
+
+  .offers-container {
+    grid-template-columns: 1fr;
+  }
+
+  .offers-title {
+    font-size: 2rem !important;
+  }
+
+  .offers-subtitle {
+    font-size: 1.1rem !important;
+  }
+}
+
+.sparkles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #FFD700;
+  border-radius: 50%;
+  animation: sparkle 3s linear infinite;
+  opacity: 0;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translateY(0) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(1);
+    opacity: 0;
+  }
+}
+
+.popular-offer .offer-card {
+  transform: scale(1.05);
+  border: 2px solid;
+  box-shadow: 0 15px 40px rgba(128, 90, 213, 0.2) !important;
+}
+
+.popular-offer .offer-card:hover {
+  transform: scale(1.08) translateY(-10px);
+  box-shadow: 0 25px 50px rgba(128, 90, 213, 0.3) !important;
+}
+
+.ribbon-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+}
+
+.ribbon {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  transform: rotate(45deg);
+  width: 150px;
+  padding: 5px 0;
+  background-color: #805AD5;
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.offer-subtext {
+  font-size: 1rem !important;
+  opacity: 0.9;
+  margin-top: 0.5rem !important;
+}
+
+.popular-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.popular-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255,255,255,0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+.offer-percentage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.popular .offer-overlay {
+  background: linear-gradient(135deg, rgba(128, 90, 213, 0.9), rgba(128, 90, 213, 0.8)) !important;
+}
+
+/* Add pulsing effect for popular offer */
+.popular-offer .offer-card::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid #805AD5;
+  border-radius: 20px;
+  animation: pulse 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+} 

@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.content {
+  padding: 20px;
+  min-height: calc(100vh - 64px);
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}

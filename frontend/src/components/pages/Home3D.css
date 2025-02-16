@@ -1,0 +1,20 @@
+.dish-tooltip {
+  background: rgba(0, 0, 0, 0.8);
+  color: #FFD700;
+  padding: 10px 20px;
+  border-radius: 5px;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: scale(0.5);
+}
+
+.dish-tooltip h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.dish-tooltip p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #ffffff;
+} 

@@ -1,0 +1,224 @@
+.restaurant-banner {
+  background: linear-gradient(135deg, #38A169 0%, #276749 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.animated-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.food-icon {
+  position: absolute;
+  animation: float 15s linear infinite;
+  opacity: 0.1;
+  filter: blur(1px);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.banner-overlay {
+  position: relative;
+  background: radial-gradient(circle at 50% 50%, rgba(56, 161, 105, 0.1) 0%, rgba(39, 103, 73, 0.2) 100%);
+  backdrop-filter: blur(5px);
+  padding: 60px 0;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.banner-icon {
+  font-size: 3rem !important;
+  color: #FFD700;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+}
+
+.banner-title {
+  font-weight: 800 !important;
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  margin-bottom: 1rem !important;
+}
+
+.banner-subtitle {
+  color: rgba(255,255,255,0.9) !important;
+  font-weight: 300 !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.highlight {
+  color: #FFD700;
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #FFD700;
+  border-radius: 2px;
+  transform-origin: left;
+  animation: underline 0.8s ease forwards 0.8s;
+  transform: scaleX(0);
+  box-shadow: 0 2px 4px rgba(255,215,0,0.3);
+}
+
+.search-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.search-input {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 50px !important;
+  padding: 15px 25px !important;
+  transition: all 0.3s ease !important;
+  border: 2px solid transparent !important;
+}
+
+.search-input:hover, .search-input.Mui-focused {
+  background: rgba(255, 255, 255, 1) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: #FFD700 !important;
+}
+
+.search-icon {
+  color: #38A169 !important;
+  animation: pulse 2s infinite;
+}
+
+.search-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: 2px solid rgba(255,215,0,0.3);
+  pointer-events: none;
+}
+
+.features-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  color: white;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.feature-text {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  z-index: 1;
+  filter: blur(20px);
+}
+
+.circle-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(45deg, #FFD700, #38A169);
+  top: -200px;
+  right: -200px;
+}
+
+.circle-2 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(-45deg, #38A169, #276749);
+  bottom: -150px;
+  left: -150px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    padding: 1rem;
+  }
+  
+  .banner-title {
+    font-size: 2rem !important;
+  }
+  
+  .banner-subtitle {
+    font-size: 1.1rem !important;
+  }
+  
+  .feature-card {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .features-container {
+    gap: 1rem;
+  }
+} 

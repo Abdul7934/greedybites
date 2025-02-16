@@ -1,0 +1,272 @@
+.canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+}
+
+.controls-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.view-button {
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.view-button:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.table-tooltip {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 15px 25px;
+  border-radius: 10px;
+  border: 1px solid #FFD700;
+  min-width: 200px;
+}
+
+.table-tooltip h3 {
+  color: #FFD700;
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.table-tooltip p {
+  color: white;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.loading-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #E0F7FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+.helper-text {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #666;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+/* Add these new styles */
+@keyframes logoGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+  }
+}
+
+.logo-container {
+  animation: logoGlow 3s infinite;
+}
+
+.particle {
+  animation: particleFloat 4s infinite;
+}
+
+/* Add these styles */
+@keyframes photoGlow {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+.photo-panel {
+  transition: all 0.3s ease;
+}
+
+.photo-panel:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.photo-description {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.photo-panel:hover .photo-description {
+  opacity: 1;
+}
+
+.search-form-3d {
+  display: flex;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+  transform: scale(0.5);
+}
+
+.search-input-3d {
+  padding: 10px 20px;
+  border: 2px solid #FFD700;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  min-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.search-input-3d:focus {
+  outline: none;
+  border-color: #FFA500;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.search-button-3d {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #FFD700;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-button-3d:hover {
+  background: #FFA500;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Category-specific styles */
+.category-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  margin: 5px 0;
+}
+
+.category-filters {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.category-button {
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-button.veg {
+  background-color: #4CAF50;
+}
+
+.category-button.non-veg {
+  background-color: #FF5252;
+}
+
+.category-button.mixed {
+  background-color: #FFC107;
+}
+
+.category-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.specialties {
+  margin-top: 10px;
+}
+
+.specialties ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.specialties li {
+  font-size: 12px;
+  color: #FFD700;
+  margin: 2px 0;
+}
+
+.table-tooltip {
+  min-width: 250px;
+}
+
+.price-range {
+  color: #FFD700;
+  font-weight: bold;
+} 

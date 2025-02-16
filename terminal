@@ -1,0 +1,47 @@
+greedybites/
+├── frontend/
+│   ├── node_modules/
+│   ├── public/
+│   │   ├── index.html
+│   │   ├── favicon.ico
+│   │   └── manifest.json
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── auth/
+│   │   │   │   ├── Login.js
+│   │   │   │   └── Register.js
+│   │   │   ├── layout/
+│   │   │   │   └── Navbar.js
+│   │   │   └── pages/
+│   │   │       ├── Home.js
+│   │   │       └── Restaurants.js
+│   │   ├── redux/
+│   │   │   ├── slices/
+│   │   │   │   ├── authSlice.js
+│   │   │   │   └── restaurantSlice.js
+│   │   │   └── store.js
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   ├── index.js
+│   │   ├── index.css
+│   │   └── theme.js
+│   ├── package.json
+│   └── README.md
+│
+└── backend/
+    ├── node_modules/
+    ├── models/
+    │   ├── User.js
+    │   └── Restaurant.js
+    ├── routes/
+    │   ├── auth.js
+    │   └── restaurants.js
+    ├── middleware/
+    │   └── auth.js
+    ├── config/
+    │   └── db.js
+    ├── .env
+    ├── package.json
+    └── server.js

@@ -1,0 +1,125 @@
+.banner-section {
+  background: linear-gradient(135deg, #FF4B2B 0%, #FF416C 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-overlay {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 100px 0;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-features {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-item:hover .feature-icon {
+  transform: rotate(10deg);
+  transition: transform 0.3s ease;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  color: #FFD700;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-image-container {
+  position: relative;
+}
+
+.banner-image {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.floating-card {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-content h4 {
+  color: #FF4B2B;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  color: #4A5568;
+  margin-bottom: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .banner-features {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .floating-card {
+    right: 0;
+    bottom: -50px;
+  }
+}
+
+.icon-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.overlay-icon {
+  font-size: 0.8rem;
+  color: #FFD700;
+} 

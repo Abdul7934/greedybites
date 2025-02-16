@@ -1,0 +1,37 @@
+.login-form-3d,
+.register-form-3d {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  min-width: 300px;
+}
+
+.login-form-3d input,
+.register-form-3d input {
+  padding: 10px;
+  border: 1px solid #FFD700;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 5px;
+}
+
+.login-form-3d button,
+.register-form-3d button {
+  padding: 10px;
+  background: #FFD700;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.login-form-3d button:hover,
+.register-form-3d button:hover {
+  background: #FFA500;
+  transform: translateY(-2px);
+} 
