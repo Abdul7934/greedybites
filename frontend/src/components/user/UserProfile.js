@@ -7,7 +7,6 @@ import {
   Avatar,
   Grid,
   Button,
-  Divider,
   List,
   ListItem,
   ListItemIcon,
@@ -22,7 +21,6 @@ import {
   LinearProgress
 } from '@mui/material';
 import {
-  Person as PersonIcon,
   Phone as PhoneIcon,
   Email as EmailIcon,
   LocationOn as LocationIcon,

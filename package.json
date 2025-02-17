@@ -1,0 +1,29 @@
+{
+  "name": "greedybites",
+  "version": "1.0.0",
+  "description": "GreedyBites is a restaurant discovery and booking web application that allows users to find the best restaurants, reserve tables, explore restaurant specialties, and discover the most-loved dishes based on customer ratings and reviews. The platform also includes a blogging section for food influencers, a reels section for restaurants to showcase their ambiance and dishes, and a smart marketing system for restaurant owners.",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "your-deployment-command-here",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdul7934/greedy-bites.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Abdul7934/greedy-bites/issues"
+  },
+  "homepage": "https://github.com/Abdul7934/greedy-bites#readme",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  },
+  "dependencies": {
+    "react-scripts": "^5.0.1"
+  }
+}
